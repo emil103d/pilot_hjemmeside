@@ -1,0 +1,258 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.index {
+  display: grid;
+  grid-template-columns: 1fr minmax(0, 1200px) 1fr;
+}
+
+.index > section {
+  grid-column: 2 / 3;
+}
+
+/* ------------Skrift----------------- */
+
+h2 {
+  font-family: "Bebas Neue", cursive;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #333333;
+  font-size: 5vw;
+  margin-top: 1.5vw;
+}
+
+h3 {
+  font-family: "Bebas Neue", cursive;
+  text-decoration: none;
+  color: #333333;
+  font-size: 4vw;
+}
+
+p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 100;
+  text-decoration: none;
+  color: #333333;
+  font-size: 1.5vw;
+  line-height: 2vw;
+}
+
+/* ------------header----------------- */
+
+.logo img {
+  width: 27%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1vw;
+}
+
+header nav ul {
+  display: flex;
+  padding: 0;
+  padding-top: 0.5vw;
+  padding-bottom: 1vw;
+  gap: 3vw;
+  list-style-type: none;
+  justify-content: space-between;
+  text-decoration: none;
+}
+
+header nav li {
+  text-align: center;
+  display: inline-block;
+  margin-right: 3vw;
+  padding: 0.75vw;
+  border-radius: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+a {
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: #001540;
+  font-size: 2vw;
+}
+
+h1 {
+  font-family: "Bebas Neue", cursive;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: #001540;
+  font-size: 7vw;
+  position: absolute;
+  top: 8.5vw;
+  left: 36vw;
+  margin-top: 1vw;
+}
+
+nav a:hover {
+  color: #ff6700;
+}
+
+nav a::before {
+  content: "";
+  display: block;
+  height: 5px;
+  width: 100%;
+  background-color: #001540;
+
+  top: 0;
+  width: 0%;
+  transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+  width: 100%;
+}
+
+#first_section {
+  margin-left: 1.5vw;
+  margin-right: 1.5vw;
+}
+
+#second_section h2 {
+  font-size: 8vw;
+}
+
+#second_section h3 {
+  font-size: 6vw;
+}
+
+#second_section p {
+  font-size: 3vw;
+  line-height: 3.5vw;
+}
+
+#second_section img {
+  margin-top: 2vw;
+}
+
+#second_section {
+  margin-left: 1.5vw;
+  margin-right: 1.5vw;
+}
+
+#third_section {
+  margin-left: 1.5vw;
+  margin-right: 1.5vw;
+}
+
+#third_section img {
+  margin-top: 2vw;
+}
+
+/* ------------First sections----------------- */
+
+video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+iframe_wrapper {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-top: calc(100% / (16 / 9));
+}
+
+iframe {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+}
+
+/* ------------Second sections----------------- */
+
+/* ------------Fotter----------------- */
+
+footer {
+  font-family: "Bebas Neue", cursive;
+  color: #333333;
+  font-size: 1.5vw;
+  font-weight: 900;
+  margin-left: 41vw;
+  margin-top: 2vw;
+  margin-bottom: 1vw;
+}
+
+@media (min-width: 600px) {
+  #second_section .section_wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-auto-rows: auto;
+    gap: 20px;
+  }
+
+  #second_section h2 {
+    font-size: 5vw;
+  }
+
+  #second_section h3 {
+    font-size: 4vw;
+  }
+
+  #second_section p {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 100;
+    text-decoration: none;
+    color: #333333;
+    font-size: 1.5vw;
+    line-height: 2vw;
+  }
+
+  #second_section .section_wrapper img {
+    width: 100%;
+  }
+
+  #third_section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: auto;
+    margin-top: 2vw;
+    position: relative;
+    gap: 0.5vw;
+    gap: 5px;
+    justify-content: first baseline;
+  }
+
+  #third_section img {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  #third_section .image1 {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+
+  #third_section .image2 {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+
+  #third_section .image4 {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+  }
+
+  #third_section .image3 {
+    grid-column: 2 / 3;
+    grid-row: 1/ 4;
+  }
+}
